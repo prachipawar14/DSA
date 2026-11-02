@@ -1,0 +1,12 @@
+class Solution:
+    def factorial(self, n: int) -> int:
+    
+        
+        def calc(n,ans):
+            if n<=1:
+                return ans
+            ans = ans*n
+            
+            return calc(n-1,ans)
+            
+        return calc(n,1)
