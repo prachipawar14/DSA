@@ -1,0 +1,23 @@
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+
+        n = x
+        rev = 0
+
+        def reverse_func(n,rev):
+            while(n>0):
+                ld = n%10
+                rev = (rev*10)+ld
+                n = n//10
+            return rev
+
+        ans = reverse_func(n,rev)
+
+        if ans == x:
+            return True
+        
+        return False
+
+        
+
+        
