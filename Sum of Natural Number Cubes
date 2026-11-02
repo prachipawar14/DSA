@@ -1,0 +1,14 @@
+
+class Solution:
+    def sumOfSeries(self, n: int) -> int:
+        
+        def calc(n,total):
+            
+            if n<=0:
+                return total
+            
+            total = total+n**3
+            
+            return calc(n-1,total)
+        
+        return calc(n,0)
