@@ -1,0 +1,14 @@
+class Solution:
+    def printGfg(self, n: int) -> None:
+        
+        def show(i,n):
+            if i > n:
+                return
+            
+            print("GFG" , end=" ")
+            
+            show(i+1,n)
+        
+        
+        show(1,n)
+        
