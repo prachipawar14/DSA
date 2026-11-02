@@ -1,0 +1,16 @@
+class Solution:
+	def reverseSubArray(self,arr,l,r):
+	    
+	    left = l-1
+	    right = r-1
+		
+		while(left<right):
+		    temp = arr[left]
+		    arr[left] = arr[right]
+		    arr[right] = temp
+		    
+		    left+=1
+		    right-=1
+		 
+		return arr
+		        
