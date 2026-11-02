@@ -1,0 +1,13 @@
+class Solution:
+    def printTillN(self, n):
+    	
+    	def show(i,n):
+    	    if i>n:
+    	        return
+    	
+    	    print(i,end=" ")
+    	
+    	    show(i+1,n)
+    	
+    	show(1,n)
+    	
