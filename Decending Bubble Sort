@@ -1,7 +1,11 @@
 def sort(arr):
   for i in range(len(arr)):
+    is_swap = False
     for j in range(0,len(arr)-i-1):
       if arr[j] < arr[j+1]:
         arr[j],arr[j+1] = arr[j+1],arr[j]
+        is_swap = True
+    if is_swap == False:
+      break
     
   return arr
