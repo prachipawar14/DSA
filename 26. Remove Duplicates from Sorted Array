@@ -1,0 +1,11 @@
+class Solution:
+    def removeDuplicates(self, nums: list[int]) -> int:
+        hash_set = set(nums)
+
+        unique = sorted(hash_set)
+
+        k = len(unique)
+
+        nums[:k] = unique
+
+        return k
