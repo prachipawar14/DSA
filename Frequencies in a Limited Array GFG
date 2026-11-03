@@ -1,0 +1,23 @@
+class Solution:
+    def frequencyCount(self, arr):
+        
+        n = len(arr)
+        
+        ans = []
+        hashmap = {}
+        
+        for i in arr:
+            if i in hashmap:
+                hashmap[i] += 1
+            else:
+                hashmap[i] = 1
+        
+        for i in range(1,n+1):
+            if i in hashmap:
+                ans.append(hashmap.get(i,0))
+            else:
+                ans.append(0)
+        
+        
+        return ans
+
